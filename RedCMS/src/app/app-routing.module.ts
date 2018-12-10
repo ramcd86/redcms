@@ -1,6 +1,5 @@
-import { CmspageComponent } from './cmspage/cmspage.component';
+import { PageComponent } from './cmscore/page/page.component';
 import { AdminHomeComponent } from './administration/admin-home/admin-home.component';
-import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,7 +9,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'redcms/admin', component: AdminHomeComponent },
   // 404
-  { path: '**', component: CmspageComponent }
+  { path: '**', component: PageComponent }
 ];
 
 @NgModule({
