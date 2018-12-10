@@ -1,4 +1,7 @@
+import { HttpBaseService } from './../_services/http/http-base.service';
+import { IPageData } from './../_interfaces/IPageData';
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public dbSub: Subscription;
+  public dbResponse: IPageData;
+
+  constructor(
+    private httpService: HttpBaseService
+  ) { 
+    this.dbSub = this.httpService.getDb().subscribe(
+      res => {
+        this.dbResponse = res;
+        console.log(res);
+      }
+    );
+  }
 
   ngOnInit() {
+
   }
 
 }

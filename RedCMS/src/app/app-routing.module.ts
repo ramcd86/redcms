@@ -1,3 +1,4 @@
+import { CmspageComponent } from './cmspage/cmspage.component';
 import { AdminHomeComponent } from './administration/admin-home/admin-home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'redcms/admin', component: AdminHomeComponent },
   // 404
-  { path: '**', component: NotfoundComponent }
+  { path: '**', component: CmspageComponent }
 ];
 
 @NgModule({
