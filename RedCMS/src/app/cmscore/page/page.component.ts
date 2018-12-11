@@ -34,7 +34,7 @@ export class PageComponent implements OnInit {
   ngOnInit() {
   }
 
-  
+
   public _routeCapture() {
     this.router.events.subscribe((event => {
       if (event instanceof NavigationEnd) {
