@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CmscoreComponent } from './cmscore/cmscore.component';
+// import { CmscoreComponent } from './cmscore/cmscore.component';
 
 @NgModule({
   declarations: [
