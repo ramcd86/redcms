@@ -62,14 +62,17 @@ export class PageComponent implements OnInit {
   }
 
   public _pagePropertySearch(nameKey, myArray) {
+    let checkCount = 0;
     for (let i = 0; i < myArray[0].pageData.length; i++) {
         if (myArray[0].pageData[i].routeName === nameKey) {
             console.log('Success!');
-            break;
+            // Do page data assignment here.
         } else {
-          console.log('Failure!');
-          this.router.navigateByUrl('/404');
+          checkCount++;
         }
+    }
+    if (checkCount === myArray[0].pageData.length) {
+          this.router.navigateByUrl('/404');
     }
   }
 

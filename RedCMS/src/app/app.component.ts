@@ -1,4 +1,7 @@
+import { HttpBaseService } from './_services/http/http-base.service';
+import { IPageData } from './_interfaces/IPageData';
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'RedCMS';
+
+  public dbSub: Subscription;
+  public dbResponse: IPageData;
+  public caughtRoutes = [];
+
+  constructor(
+    private httpService: HttpBaseService
+  ) {
+    this.dbSub = this.httpService.getDb().subscribe(
+      res => {
+        this.dbResponse = res;
+        for (let i = 0; i < res[0].pageData.length; i++) {
+          this.caughtRoutes.push(res[0].pageData[i].routeName);
+        }
+      }
+    );
+  }
+
 }

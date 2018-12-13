@@ -15,13 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private httpService: HttpBaseService
-  ) { 
-    this.dbSub = this.httpService.getDb().subscribe(
-      res => {
-        this.dbResponse = res;
-        console.log(res);
-      }
-    );
+  ) {
   }
 
   ngOnInit() {
