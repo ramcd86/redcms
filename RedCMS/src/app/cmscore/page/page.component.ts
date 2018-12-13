@@ -46,7 +46,7 @@ export class PageComponent implements OnInit {
   }
 
   public _routeObjectRequest() {
-    this.routeSub = this.httpService.getDb().subscribe(res => {
+    this.routeSub = this.httpService._getDb().subscribe(res => {
       this.pageData = res;
       this.pageObject.routeObject = res[0].pageData;
       this.pageConstruct.next(this.pageObject);

@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(
     private httpService: HttpBaseService
   ) {
-    this.dbSub = this.httpService.getDb().subscribe(
+    this.dbSub = this.httpService._getDb().subscribe(
       res => {
         this.dbResponse = res;
         for (let i = 0; i < res[0].pageData.length; i++) {

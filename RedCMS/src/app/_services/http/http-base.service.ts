@@ -13,7 +13,7 @@ export class HttpBaseService {
     private http: HttpClient
   ) { }
 
-public getDb(): Observable<any> {
+public _getDb(): Observable<any> {
   const endpoint = `http://localhost:3000/pageData`;
   return this.http.get(endpoint).pipe(map(
     (res: IPageData) => res
