@@ -1,3 +1,4 @@
-<p>
-  {{this.route}}
-</p>
+<div id="pageBaseContainer" *ngIf="this.pageProps">
+  {{this.pageProps.title}}<br>
+  {{this.pageProps.pageContent}}
+</div>

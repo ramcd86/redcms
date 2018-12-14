@@ -19,25 +19,7 @@
                 },
                 {
                     "route": 3,
-                    "routeName": "faq",
-                    "title": "faq page",
-                    "pageContent": "Welcome to the faq page"
-                },
-                {
-                    "route": 2,
-                    "routeName": "about",
-                    "title": "about page",
-                    "pageContent": "Welcome to the about page"
-                },
-                {
-                    "route": 1,
-                    "routeName": "welcome",
-                    "title": "Welcome page",
-                    "pageContent": "Welcome to the welcome page"
-                },
-                {
-                    "route": 3,
-                    "routeName": "faq",
+                    "routeName": "LordFarquad",
                     "title": "faq page",
                     "pageContent": "Welcome to the faq page"
                 }

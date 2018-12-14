@@ -1,3 +1,4 @@
+import { IPageConstruction } from './../../_interfaces/IPageData';
 import { IRouteMatch } from './../../_interfaces/IRouteMatch';
 import { HttpBaseService } from './../../_services/http/http-base.service';
 import { Subscription, Subject } from 'rxjs';
@@ -19,6 +20,7 @@ export class PageComponent implements OnInit {
   public pageObject = <IRouteMatch>{};
   public filteredPage: any;
   public routeSub: Subscription;
+  public pageProps: IPageConstruction;
 
 
   constructor(
@@ -65,8 +67,8 @@ export class PageComponent implements OnInit {
     let checkCount = 0;
     for (let i = 0; i < myArray[0].pageData.length; i++) {
         if (myArray[0].pageData[i].routeName === nameKey) {
-            console.log('Success!');
-            // Do page data assignment here.
+            // console.log(myArray[0].pageData[i]);
+            this.pageProps = myArray[0].pageData[i];
         } else {
           checkCount++;
         }
